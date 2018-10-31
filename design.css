@@ -3,6 +3,8 @@
 body {
       margin: 0px;
       padding: 0px;
+      width: 100%;
+      height: auto;
 background-image: url(god.jpg); 
 
 
@@ -81,10 +83,14 @@ iframe {
 margin: -30vw;
 margin-right: 1vw;
   width: 25%;
-  height: 35vw;
+  height: 30vw;
   float: right;
 border-radius: 50vw;
 
+background-attachment: fixed;
+background-position: center;
+
+background-size: contain;
 
 }
   
