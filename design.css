@@ -5,7 +5,7 @@ body {
       padding: 0px;
       width: 100%;
       height: auto;
-background-image: url(god.jpg); 
+background-image: url(tomte.jpg); 
 
 
  
@@ -30,15 +30,16 @@ h1 {
   font-family: Georgia, serif ;
   font-display: unset;
   font-stretch: semi-expanded;
-  color: rgb(255, 209, 209);
+  color: rgb(255, 55, 55);
 }
 
 .article {
 
  
-  
-    color: rgb(255, 255, 255);
-    font-size: 2vw;
+  padding: -1vw;
+  padding-right: 8vw;
+    color: black;
+    font-size: 2.2vw;
     float: center;
    
   
