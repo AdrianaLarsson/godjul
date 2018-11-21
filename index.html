@@ -1,71 +1,116 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-<title>Jullista</title>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" type="text/css" href="design.css">
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+        <link rel="stylesheet" type="text/css" href="design.css">
+        <title>Blank App</title>
+    </head>
+    <body>
+     
 
-</head>
-<body>
+            <header>
+                    <h1>
+                        <em>God jul Marie</em> 
+                    </h1>
+                   
+                   
+            </header>
+            
+            
+                    
+            
+            <div id="test">Hoppas du har en underbar jul och nyår, med din man och nära och kära.
+                <br>
+                <br>
+                 Längst ner hittar du en Jullista, en Jullista till dig från mig. 
+                 <br>
+                 <br>
+                Man kan kalla detta som ett litet vykort, ett digitalt, på en webbsida. Med tanke på att jag vet att du gillar vykort.
+                
+            </div>
+
+     <div class="spotify">
+            <iframe src="https://open.spotify.com/embed/user/adri4na/playlist/4RtzTevGbbRQ1C0vUs5DPJ" width="350vw" height="70vw" frameborder="0" allowtransparency="true" allow="encrypted-media"style=" border-radius:46px solid lightgrey; "></iframe> 
+    </div>
+        
+            <canvas id="canvas">
+
+            
+
+            </canvas> 
+         
+ 
+                                  
+         
+
+
+                  <script type="text/javascript">
+
+
+ 
+        
+function init(){
+var canvas = document.getElementById('canvas');
+var ctx = canvas.getContext('2d');
+var w = canvas.width;
+var h = canvas.height;
 
 
 
-<div class="header">
+var flakes = [];
+ 
+function snowfall(){
+ctx.clearRect(0, 0, w, h);
+
+addFlake();
+snow();     
+};
+
+ 
+ function addFlake(){
+var x = Math.ceil(Math.random() * w);
+var s = Math.ceil(Math.random() * 3);
+flakes.push({"x": x, "y": 0, "s": s});
 
 
-<h1>
-     <em>God jul Marie</em> 
-</h1>
+ };
+
+function snow(){
+
+      for (var i = 0; i < flakes.length; i++){
+        var flake = flakes[i];
+        ctx.beginPath();
+        ctx.fillStyle = "rgba(255, 255, 255, 0.7)";
+         ctx.arc(flake.x, flakes[i].y+=flake.s/2, flake.s/2, 0, 2 * Math.PI);
+       
+         ctx.fill();
+           if (flakes[i].y > h){
+                 flakes.splice(i, 1);
+           }
+
+      };
+};
+
+setInterval(snowfall, 20);
+  
+
+  };
+
+window.onload = init;
 
 
-<section>
+
 
         
-
-        <div class="article">
-
-
-            <div class="text">
-
-Jullistan till dig Marie <br>
-
-Jag hoppas du får en underbar jul
-<br> och ett underbar nyår,
-<br>
- med din man och nära o kära.
-<br>
-Här är låtar som jag själv tycker mycket om.
-<br>
-Vid det här laget,
-<br>
- vet du ju att musik är väldigt viktigt för mig. <br>
-Att kunna dela med sin musik med andra
-<br>
- och framför allt med dig är GULD! <br>
- Likaså är att få höra din musik. <br>
-
- PUSS O KRAM VACKRA KVINNA
-
-
-            </div>
-            </div>
-
-                
-
-
-    <div class="side">
-        <iframe src="https://open.spotify.com/embed/user/adri4na/playlist/4RtzTevGbbRQ1C0vUs5DPJ" width="200" height="300" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
-      </div>
-
-      <div class="nav">
-
-      
-      </div>
-
-</section>
-
-
-
-</body>
+        
+        
+        
+        
+        
+        
+        
+        
+        </script>
+    </body>
 </html>
